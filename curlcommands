@@ -9,3 +9,24 @@ curl http://10.63.251.31:9000/flavors | python -m json.tool
 # Create a persistent disk flavor
 curl -k -s -X POST -H "Content-Type: application/json" -d '{"kind": "persistent-disk", "name": "small", "cost": [{"unit": "GB", "value": "10", "key": "disk.capacity"}]}' http://10.63.251.31/flavors | python -m json.tool
 
+# Get the network details of a named network
+curl http://10.63.251.31:9000/subnets?name=VLAN251 | python -m json.tool
+
+# Get details of a tenant
+curl http://10.63.251.31:9000/tenants?name=Finance | python -m json.tool
+
+# get detailed list of projects
+curl http://10.63.251.31:9000/tenants/73f54919-4a02-4af7-8444-a2001b01b58e/projects | python -m json.tool
+
+# get detailed list of clusters
+curl http://10.63.251.31:9000/projects/9f1d407b-3e78-4bb5-af1b-a711d09b373b/clusters | python -m json.tool
+
+# Create a cluster
+curl -vX POST -H "Content-Type: application/json" -d @mesoscluster.json  http://10.63.251.31:9000/projects/9f1d407b-3e78-4bb5-af1b-a711d09b373b/clusters | python -m json.tool
+
+# Get details of a task
+curl http://10.63.251.31:9000/tasks/93d9f2fa-16c4-4c38-898b-ef18b4348a08 | python -m json.tool
+
+# Delete a cluster
+curl -X DELETE http://10.63.251.31:9000/clusters/5f1ff30d-a898-4c81-8aa8-0ae8f035761f | python -m json.tool
+

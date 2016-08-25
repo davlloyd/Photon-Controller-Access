@@ -1,0 +1,12 @@
+{
+    "name": "<NAME>",
+    "type": "MESOS",
+    "slaveCount": "1",
+    "vmNetworkId": "<NETWORKID>",
+    "extendedProperties": {
+        "dns": "10.63.249.12",
+        "netmask": "<NETMASK>",
+        "gateway": "<GATEWAY>",
+        "zookeeper_ip1": "<ZOO1>"
+    }
+}

@@ -28,7 +28,6 @@ if(myResponse.ok):
     deployId = resData['items'][0]['id']
     print(deployId)
      
-
     # Add hostAddress
 
     # Set Host to paused 

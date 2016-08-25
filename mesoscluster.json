@@ -1,0 +1,11 @@
+{
+    "name": "vmworld1",
+    "type": "MESOS",
+    "slaveCount": "1",
+    "extendedProperties": {
+        "dns": "10.63.249.12",
+        "netmask": "255.255.255.0",
+        "gateway": "10.63.251.1",
+        "zookeeper_ip1": "10.63.251.34"
+    }
+}

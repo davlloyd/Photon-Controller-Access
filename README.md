@@ -1,2 +1,6 @@
 # Photon-Controller-Access
-Scripts covering interaction with Photon Controller 
+
+## Description
+Scripts covering interaction with Photon Controller in Python 3.x
+
+## Dependencies
